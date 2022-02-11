@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC');
+
+* {
+   box-sizing: border-box;
+}
+body {
+   margin: 0;
+   padding: 0;
+   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   background-color: #e6e6e6;
+}
+
+#headerWrap {
+	padding: 0px 4% 0px;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background-color: rgba(255,255,255,0.5);
+   display: flex;
+   align-items: center;
+}
+
+h1 {
+   margin: 0; padding: 0;
+   font-size: 20px;
+}
+
+a {
+   text-decoration: none;
+   color: #4b4b4b;
+}
+
+nav {
+   margin: 0 0 0 auto;
+   font-family: 'IM Fell DW Pica SC', serif;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   display:flex;
+}
+
+li {
+   margin: 0 0 0 15px;
+   font-size: 15px;
+}
+
+.main-visual {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+	 height:100vh;
+   background: url("../images/interviewImg.jpg") top center / cover no-repeat ;
+}
+
+h2 {
+   margin: 0;
+   font-size: 30px;
+   font-weight: normal;
+   color:rgba(210,210,210,1);
+   text-align:center;
+text-shadow: 2px 2px 2px #808080;
+}
+
+.sp-nav{
+	display:none;
+}
+
+@media screen and (max-width:1400px){
+  #sec05 ul{
+    display:block;
+    text-align:center;
+    margin-left: -70px;
+  }
+  #map iframe{
+    margin:auto;
+    width:100%;
+    height:250px;
+  }
+}
+
+@media screen and (min-width:1400px){
+  #map iframe{
+    margin:auto;
+    width:500px;
+    height:350px;
+  }
+}
+@media screen and (max-width:640px){
+	.pc-nav{
+		display:none;
+	}
+	#hamburger {
+		 position: relative;
+		 display: block;
+		 width: 30px;
+		 height: 25px;
+		 margin: 0 0 0 auto;
+	}
+	#hamburger span {
+	   position: absolute;
+	   top: 50%;
+	   left: 0;
+	   display: block;
+	   width: 100%;
+	   height: 2px;
+	   background-color: #fff;
+	   transform: translateY(-50%);
+	}
+	#hamburger::before {
+	   content: '';
+	   display: block;
+	   position: absolute;
+	   top: 0;
+	   left: 0;
+	   width: 100%;
+	   height: 2px;
+	   background-color: #fff;
+	}
+	#hamburger::after {
+	   content: '';
+	   display: block;
+	   position: absolute;
+	   bottom: 0;
+	   left: 0;
+	   width: 70%;
+	   height: 2px;
+	   background-color: #fff;
+	}
+	.sp-nav {
+	   z-index: 1;
+	   position: fixed;
+	   top: 0;
+	   left: 0;
+	   width: 100%;
+	   height: 100vh;
+	   display: block;
+	   width: 100%;
+	   background: rgba(0, 0, 0, 1);
+	   transition: all .2s ease-in-out;
+	}
+	.sp-nav ul {
+	   padding: 0;
+	   display: flex;
+	   flex-direction: column;
+	   justify-content: center;
+	   align-items: center;
+	   height: 100%;
+	}
+	.sp-nav li {
+	   margin: 0;
+	   padding: 0;
+	}
+	.sp-nav li span {
+	   font-size: 15px;
+	   color: #fff;
+	}
+	.sp-nav li a, .sp-nav li span {
+	   display: block;
+	   padding: 20px 0;
+		 color:#fff;
+	}
+	.sp-nav .close {
+	   position: relative;
+	   padding-left: 20px;
+	}
+	.sp-nav .close::before {
+	   content: '';
+	   position: absolute;
+	   top: 50%;
+	   left: 0;
+	   display: block;
+	   width: 16px;
+	   height: 1px;
+	   background: #fff;
+	   transform: rotate( 45deg );
+	}
+	.sp-nav .close::after {
+	   content: '';
+	   position: absolute;
+	   top: 50%;
+	   left: 0;
+	   display: block;
+	   width: 16px;
+	   height: 1px;
+	   background: #fff;
+	   transform: rotate( -45deg );
+	}
+	.sp-nav {
+   z-index: 1;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   display: block;
+   width: 100%;
+   background: rgba(0, 0, 0, .8);
+   transition: all .2s ease-in-out;
+   opacity: 0;
+   transform: translateY(-100%);
+	}
+	.toggle {
+   transform: translateY( 0 );
+   opacity: 1;
+	}
+	.main-visual {
+   padding: 0 4%;
+	}
+	h2 {
+	   line-height: 1.6;
+	   text-align: center;
+	}
+}
+
+.resultImg{
+  text-align:center;
+}
+.resultImg img{
+  width:70%;
+}
+
+section{
+  margin-top:100px;
+  border-top:solid 2px rgba(200,200,200,0.5);
+  text-align:center;
+}
+
+#title{
+  color:000000;
+  text-align:center;
+  margin:auto;
+  margin-bottom:50px;
+  padding-top:50px;
+  width:300px;
+  border-bottom:solid 2px;
+  overflow:hidden;
+}
+
+.innerS{
+  text-align:center;
+  margin:0 15%;
+}
+
+#title img{
+  transition:1s all;
+}
+
+#title img:hover{
+  transform:scale(1.2,1.2);
+  transition:1s all;
+}
+
+#footerWrap{
+  margin-top:40px;
+  padding: 0px 4% 0px;
+  top: 0;
+  width: 100%;
+  background-color:#d3d3d3;
+  display: flex;
+  align-items: center;
+}
+
+.footer-nav ul{
+  padding-top:20px;
+}
